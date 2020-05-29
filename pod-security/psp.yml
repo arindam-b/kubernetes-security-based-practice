@@ -1,0 +1,22 @@
+apiVersion: extensions/v1beta1
+kind: PodSecurityPolicy
+metadata:
+  name: general-psp
+  namespace: footapp
+spec:
+  privileged: false  # Prevents creation of privileged Pods
+  allowPrivilegeEscalation: false # Prevents escalations to root
+  allowedCapabilities:
+  - "*"
+  runAsUser:
+   rule: 'MustRunAsNonRoot' # Containers to run as non root
+  seLinux:
+    rule: RunAsAny
+  supplementalGroups:
+    rule: RunAsAny
+  runAsUser:
+    rule: RunAsAny
+  fsGroup:
+    rule: RunAsAny
+  volumes:
+  - '*'

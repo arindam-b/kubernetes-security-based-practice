@@ -1,0 +1,20 @@
+# Bind the ClusterRole to the desired set of service accounts.
+# Policies should typically be bound to service accounts in a namespace.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: psp-rolebinding
+  namespace: footapp
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: gl-psp-clusterrole
+subjects: # The subjects field specifies to which accounts the ClusterRole is bound.
+# Example: All service accounts in my-namespace
+#- apiGroup: rbac.authorization.k8s.io
+#  kind: Group
+#  name: system:serviceaccounts # system:serviceaccounts This means all service account in the cluster
+# Example: A specific service account in my-namespace
+- kind: ServiceAccount 
+  name: user-robot   # <authorized service account name>
+  namespace: footapp # individual ServiceAccount, default, which specifies the default service account in the namespace
