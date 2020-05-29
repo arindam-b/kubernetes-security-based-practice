@@ -27,14 +27,14 @@ spec:
         env:
         - name: MY_SECRET
           valueFrom:
-           configMapKeyRef:
+           secretKeyRef:
             name: footapp-secret
             key: MY_SECRET
-        - name: PLATFORM
-          valueFrom:
-           secretKeyRef:
-            name: footapp-cm
-            key: PLATFORM
+#        - name: PLATFORM
+#          valueFrom:
+#           configMapKeyRef:
+#            name: footapp-cm
+#            key: PLATFORM
         livenessProbe:
             httpGet:
                 path: /
