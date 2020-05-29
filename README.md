@@ -9,6 +9,7 @@ kubectl apply -f footapp-namespace.yml
 kubectl apply -f service-account.yml
 
 kubectl apply -f secret.yml
+kubectl create secret generic footapp-secret --from-literal MY_SECRET='My Super Secret'
 
 kubectl apply -f configmap.yml
 
