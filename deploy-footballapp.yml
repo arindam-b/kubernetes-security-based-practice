@@ -25,11 +25,11 @@ spec:
         ports:
         - containerPort: 8080
         env:
-#        - name: MY_SECRET
-#          valueFrom:
-#           secretKeyRef:
-#            name: footapp-secret
-#            key: MY_SECRET
+        - name: MY_SECRET
+          valueFrom:
+           secretKeyRef:
+            name: footapp-secret
+            key: MY_SECRET
 #        - name: PLATFORM
 #          valueFrom:
 #           configMapKeyRef:
