@@ -16,9 +16,9 @@ def default_competition():
 @app.route('/printlogs', methods=['GET'])
 def print():
     print('Get Secret Loaded from environment')
-    print(os.environ.get('MY_SECRET'))
+    print(os.environ['MY_SECRET'])
     print('Get ConfigMap Loaded from environment')
-    print(os.environ.get('PLATFORM'))
+    print(os.environ['PLATFORM'])
     return "Printed", 200
 
 # This is for debug mode on
