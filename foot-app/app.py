@@ -14,7 +14,7 @@ def default_competition():
     return "This is for local football competition event", 200
 
 @app.route('/printlogs', methods=['GET'])
-def print():
+def printlogs():
     print('Get Secret Loaded from environment')
     print(os.environ['MY_SECRET'])
     print('Get ConfigMap Loaded from environment')
