@@ -1,6 +1,6 @@
-============================================
-Readme
-============================================
+
+#Readme
+
 
 docker build -t arindambanerjee/footapp:v1 foot-app/
 
