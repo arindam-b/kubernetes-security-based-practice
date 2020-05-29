@@ -28,12 +28,12 @@ spec:
         - name: MY_SECRET
           valueFrom:
            configMapKeyRef:
-            name:footapp-secret
+            name: footapp-secret
             key: MY_SECRET
         - name: PLATFORM
           valueFrom:
            secretKeyRef:
-            name:footapp-cm
+            name: footapp-cm
             key: PLATFORM
         livenessProbe:
             httpGet:

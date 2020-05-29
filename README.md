@@ -18,9 +18,3 @@ kubectl apply -f pod-security/
 kubectl apply -f secret-reader/
 
 kubectl apply -f deploy-footballapp.yml
-
-kubectl apply -f 
-
-kubectl apply -f 
-
-kubectl apply -f 
